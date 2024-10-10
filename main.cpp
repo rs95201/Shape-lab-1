@@ -7,5 +7,12 @@ int main()
 
   Shape *circ = new Circle(5, 5);
   cout << "Circle Area: " << circ->getArea() << endl;
+<<<<<<< Updated upstream
+=======
+
+  Shape *tri = new Triangle(3, 4, 3);
+  std::cout << "Triangle Area: " << tri->getArea() << std::endl;
+
+>>>>>>> Stashed changes
   return 0;
 }
