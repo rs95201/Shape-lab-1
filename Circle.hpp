@@ -13,8 +13,14 @@ public:
   {
     return 2 * 3.14 * Radius;
   }
+  string getName() const override
+  {
+        return name;
+  }
+
 
 private:
   double Area;
   double Radius;
+  string name = "Circle";
 };

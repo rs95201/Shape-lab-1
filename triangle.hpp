@@ -12,9 +12,14 @@ public:
   {
     return base + height + hypo;
   }
+  string getName() const override
+  {
+        return name;
+  }
 
 private:
   double base;
   double height;
   double hypo;
+  string name = "Triangle";
 };

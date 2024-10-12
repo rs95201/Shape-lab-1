@@ -1,16 +1,40 @@
 #include "Rectangle.hpp"
 #include "Circle.hpp"
-#include "triangle.hpp"
+#include "Isosceles.hpp"
+#include <cmath>
+#include <cassert>
+#include <sstream>
+#include <iostream>
+
+string printAreaToScreen(Shape *s)
+{
+    stringstream ss;
+    ss << "Area of " << s->getName() << " is " << s->getArea();
+    return ss.str();
+}
 int main()
 {
-  Shape *rect = new Rectangle(5, 5);
-  cout << "Rectangle Area: " << rect->getArea() << endl;
+    Rectangle r(2,4);
+    assert(r.getArea() == 8);
+    assert(r.getPerimeter() == 12);
+    assert(printAreaToScreen(&r) == "Area of Rectangle is 8");
+    
+    Triangle t(3,4,3);
+    assert(t.getArea() == 6);
+    assert(t.getPerimeter() == 10);
+    assert(printAreaToScreen(&t) == "Area of Triangle is 6");
+    
+    
+    Isosceles i(4);
+    assert(i.getArea() == 8);
+    assert(i.getPerimeter() == 8 + (4 *sqrt(2)));
+    assert(printAreaToScreen(&i) == "Area of Isosceles Right Triangle is 8");
 
-  Shape *circ = new Circle(5, 5);
-  cout << "Circle Area: " << circ->getArea() << endl;
+     //Add asserts for square and circle
 
-  Shape *tri = new Triangle(3, 4, 3);
-  std::cout << "Triangle Area: " << tri->getArea() << std::endl;
-
-  return 0;
+    std::cout << "All assertions passed" << std::endl;
+    
+   
+    
 }
+
