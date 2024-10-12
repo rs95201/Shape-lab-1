@@ -13,6 +13,9 @@ int main()
   Shape *tri = new Triangle(3, 4, 3);
   std::cout << "Triangle Area: " << tri->getArea() << std::endl;
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   return 0;
 }
