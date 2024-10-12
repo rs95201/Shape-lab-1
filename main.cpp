@@ -1,20 +1,29 @@
 #include "Rectangle.hpp"
 #include "Circle.hpp"
-#include "triangle.hpp"
+#include "Isosceles.hpp"
+
+#include <cassert>
 int main()
 {
-  Shape *rect = new Rectangle(5, 5);
-  cout << "Rectangle Area: " << rect->getArea() << endl;
+ Rectangle r(2,4);
+    assert(r.getArea() == 8);
+    assert(r.getPerimeter() == 12);
+    
+    
+    Triangle t(3,4,3);
+    assert(t.getArea() == 6);
+    assert(t.getPerimeter() == 10);
+   
+    
+    //Circle c(3);
+    //assert(c.getArea() == Circle::PI * 9 );
+    //assert(c.getPerimeter() == Circle::PI * 6);
 
-  Shape *circ = new Circle(5, 5);
-  cout << "Circle Area: " << circ->getArea() << endl;
-
-  Shape *tri = new Triangle(3,4,3);
-  std::cout << "Triangle Area: " << tri->getArea() << std::endl;
-
-  delete rect;
-  delete tri;
-  delete circ;
+    Isosceles i(4);
+    assert(i.getArea() == 8);
+    assert(i.getPerimeter() == 8 + (4 *sqrt(2)));
+    
+    cout << "All assertions passed" << endl;
   
   return 0;
 }
