@@ -39,7 +39,7 @@ int main()
   assert(s.getName() == "Square");
   assert(printAreaToScreen(&s) == "Area of Square is 11.56");
 
-  Circle c(5, 5);
+  Circle c(5);
   assert(c.getArea() == PI * 5.0 * 5.0);
   assert(c.getPerimeter() == 2 * 5.0 * PI);
   assert(c.getName() == "Circle");
