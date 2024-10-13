@@ -11,7 +11,7 @@ public:
   }
   double getPerimeter() const override
   {
-    return 2 * 3.14 * Radius;
+    return 2 * PI * Radius;
   }
   string getName() const override
   {
