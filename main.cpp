@@ -34,11 +34,14 @@ int main()
   assert(s.getArea() == 3.4 * 3.4);
   assert(s.getPerimeter() == 4 * 3.4);
   assert(s.getName() == "Square");
+  assert(printAreaToScreen(&s) == "Area of Square is 11.56");
 
   Circle c(5, 5);
   assert(c.getArea() == M_PI * 5.5 * 5.5);
   assert(c.getPerimeter() == 2 * M_PI * 5.5);
   assert(c.getName() == "Circle");
+  assert(printAreaToScreen(&i) == "Area of Circle is 78.54");
 
-  std::cout << "All assertions passed" << std::endl;
+  std::cout
+      << "All assertions passed" << std::endl;
 }
