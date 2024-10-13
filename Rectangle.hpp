@@ -12,8 +12,13 @@ public:
   {
     return 2 * (width + height);
   }
+  string getName() const override
+  {
+        return name;
+  }
 
 private:
   double width;
   double height;
+  string name = "Rectangle";
 };
